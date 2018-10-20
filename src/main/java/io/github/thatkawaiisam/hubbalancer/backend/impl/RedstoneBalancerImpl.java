@@ -25,7 +25,7 @@ public class RedstoneBalancerImpl implements IBalancerImpl {
             return null;
         }
         for (RedstoneServer server : redstoneServers) {
-            if (server.getData().getState().equals(ServerState.OFFLINE)) {
+            if (server.getData().getState() == ServerState.OFFLINE) {
                 redstoneServers.remove(server);
             }
         }
