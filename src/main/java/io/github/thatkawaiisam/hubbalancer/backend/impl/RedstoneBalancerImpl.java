@@ -1,6 +1,6 @@
-package io.github.thatkawaiisam.hubbalancer.algoritium.impl;
+package io.github.thatkawaiisam.hubbalancer.backend.impl;
 
-import io.github.thatkawaiisam.hubbalancer.algoritium.IBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.IBalancerImpl;
 import io.github.thatkawaiisam.redstone.bungee.RedstoneBungeeAPI;
 import io.github.thatkawaiisam.redstone.shared.RedstoneSharedAPI;
 import io.github.thatkawaiisam.redstone.shared.server.RedstoneServer;

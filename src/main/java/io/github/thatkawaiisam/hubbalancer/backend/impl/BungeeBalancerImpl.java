@@ -1,7 +1,7 @@
-package io.github.thatkawaiisam.hubbalancer.algoritium.impl;
+package io.github.thatkawaiisam.hubbalancer.backend.impl;
 
 import io.github.thatkawaiisam.hubbalancer.HubBalancerPlugin;
-import io.github.thatkawaiisam.hubbalancer.algoritium.IBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.IBalancerImpl;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.config.ServerInfo;
 

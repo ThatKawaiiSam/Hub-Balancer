@@ -3,4 +3,5 @@ Balancer-Implementation: Redstone
 
 #This bit is not needed if you are using the Redstone Implementation.
 Hub-Servers:
-  - hub-01
+  - na-hub-01
+  - eu-hub-01

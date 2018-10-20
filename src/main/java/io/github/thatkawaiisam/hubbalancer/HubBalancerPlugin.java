@@ -1,9 +1,9 @@
 package io.github.thatkawaiisam.hubbalancer;
 
 import io.github.thatkawaiisam.configs.BungeeConfigHelper;
-import io.github.thatkawaiisam.hubbalancer.algoritium.IBalancerImpl;
-import io.github.thatkawaiisam.hubbalancer.algoritium.impl.BungeeBalancerImpl;
-import io.github.thatkawaiisam.hubbalancer.algoritium.impl.RedstoneBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.IBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.impl.BungeeBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.impl.RedstoneBalancerImpl;
 import lombok.Getter;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
