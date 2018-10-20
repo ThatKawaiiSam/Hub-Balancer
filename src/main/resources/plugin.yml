@@ -1,0 +1,4 @@
+name: Hub-Balancer
+version: 1.0-SNAPSHOT
+author: ThatKawaiiSam
+main: io.github.thatkawaiisam.hubbalancer.HubBalancerPlugin
