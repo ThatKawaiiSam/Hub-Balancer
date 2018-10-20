@@ -1,16 +1,16 @@
 package io.github.thatkawaiisam.hubbalancer;
 
 import io.github.thatkawaiisam.configs.BungeeConfigHelper;
-import io.github.thatkawaiisam.hubbalancer.backend.IBalancerImpl;
-import io.github.thatkawaiisam.hubbalancer.backend.impl.BungeeBalancerImpl;
-import io.github.thatkawaiisam.hubbalancer.backend.impl.RedstoneBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.IBalancer;
+import io.github.thatkawaiisam.hubbalancer.backend.impl.BungeeBalancer;
+import io.github.thatkawaiisam.hubbalancer.backend.impl.RedstoneBalancer;
 import lombok.Getter;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 
 public class HubBalancerPlugin extends Plugin {
 
-    @Getter private static IBalancerImpl balancerImplementation;
+    @Getter private static IBalancer balancerImplementation;
     @Getter private static BungeeConfigHelper balancerConfig;
 
     @Override
@@ -31,9 +31,9 @@ public class HubBalancerPlugin extends Plugin {
         Configuration configuration = balancerConfig.getConfiguration();
         //Redstone
         if (configuration.getString("Balancer-Implementation").equalsIgnoreCase("Redstone")) {
-            balancerImplementation = new RedstoneBalancerImpl();
+            balancerImplementation = new RedstoneBalancer();
         }else{
-            balancerImplementation = new BungeeBalancerImpl();
+            balancerImplementation = new BungeeBalancer();
         }
     }
 }

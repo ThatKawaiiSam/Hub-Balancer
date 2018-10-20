@@ -23,6 +23,7 @@ public class HubBalancerListeners implements Listener {
         final ServerInfo serverInfo = HubBalancerPlugin.getBalancerImplementation().getRandomServer();
 
         if (serverInfo == null) {
+            //TODO maybe make this a message instead of a kick
             player.disconnect(
                     TextComponent.fromLegacyText(
                             ChatColor.translateAlternateColorCodes(
@@ -40,12 +41,12 @@ public class HubBalancerListeners implements Listener {
                 TextComponent.fromLegacyText(
                         ChatColor.translateAlternateColorCodes(
                                 '&',
-                                "You are being connected to ..."
+                                "You are being connected to " + serverInfo.getName() + "!"
                         )
                 )
         );
 
         //Set Target
-        event.setTarget(null);
+        event.setTarget(serverInfo);
     }
 }

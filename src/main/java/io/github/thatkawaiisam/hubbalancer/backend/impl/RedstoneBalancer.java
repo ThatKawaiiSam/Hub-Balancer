@@ -1,6 +1,6 @@
 package io.github.thatkawaiisam.hubbalancer.backend.impl;
 
-import io.github.thatkawaiisam.hubbalancer.backend.IBalancerImpl;
+import io.github.thatkawaiisam.hubbalancer.backend.IBalancer;
 import io.github.thatkawaiisam.redstone.bungee.RedstoneBungeeAPI;
 import io.github.thatkawaiisam.redstone.shared.RedstoneSharedAPI;
 import io.github.thatkawaiisam.redstone.shared.server.RedstoneServer;
@@ -11,7 +11,7 @@ import net.md_5.bungee.api.config.ServerInfo;
 import java.util.Collections;
 import java.util.List;
 
-public class RedstoneBalancerImpl implements IBalancerImpl {
+public class RedstoneBalancer implements IBalancer {
 
     @Override
     public ServerInfo getRandomServer() {
