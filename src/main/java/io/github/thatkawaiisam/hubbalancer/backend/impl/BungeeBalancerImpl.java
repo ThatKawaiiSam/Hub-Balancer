@@ -8,11 +8,11 @@ import net.md_5.bungee.api.config.ServerInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BungeeBalancer implements IBalancer {
+public class BungeeBalancerImpl implements IBalancer {
 
     private List<String> hubServers = new ArrayList<>();
 
-    public BungeeBalancer() {
+    public BungeeBalancerImpl() {
         hubServers.clear();
         hubServers.addAll(
                 HubBalancerPlugin
