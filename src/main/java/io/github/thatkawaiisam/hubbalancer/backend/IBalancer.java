@@ -5,4 +5,5 @@ import net.md_5.bungee.api.config.ServerInfo;
 public interface IBalancer {
 
     ServerInfo getRandomServer();
+
 }

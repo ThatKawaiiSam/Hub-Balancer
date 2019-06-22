@@ -11,42 +11,40 @@ import net.md_5.bungee.event.EventHandler;
 public class HubBalancerListeners implements Listener {
 
     @EventHandler
-    public void onInitalConnect(ServerConnectEvent event) {
+    public final void onInitalConnect(ServerConnectEvent event) {
         final ProxiedPlayer player = event.getPlayer();
         final ServerInfo originalTarget = event.getTarget();
 
         //TODO make target server configurable
-        if (!originalTarget.getName().equalsIgnoreCase("hub-connector")) {
+        if(!originalTarget.getName().equalsIgnoreCase("hub-connector")) {
             return;
         }
 
         final ServerInfo serverInfo = HubBalancerPlugin.getBalancerImplementation().getRandomServer();
 
         if (serverInfo == null) {
-            //TODO maybe make this a message instead of a kick
-            player.disconnect(
-                    TextComponent.fromLegacyText(
-                            ChatColor.translateAlternateColorCodes(
-                                    '&',
-                                    "&cUnable to connect you to a hub server!"
-                            )
-                    )
-            );
+                player.disconnect(
+                        TextComponent.fromLegacyText(
+                                ChatColor.translateAlternateColorCodes(
+                                        '&',
+                                        "&cThere are currently no available hub servers."
+                                )
+                        )
+                );
             return;
         }
 
+        //Set Target
+        event.setTarget(serverInfo);
 
         //Send message on which server it is getting transferred to.
         player.sendMessage(
                 TextComponent.fromLegacyText(
                         ChatColor.translateAlternateColorCodes(
                                 '&',
-                                "You are being connected to " + serverInfo.getName() + "!"
+                                "&aYou are being connected to " + serverInfo.getName() + "!"
                         )
                 )
         );
-
-        //Set Target
-        event.setTarget(serverInfo);
     }
 }
