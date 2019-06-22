@@ -1,7 +1,15 @@
 #Example: Default, Redstone
 Balancer-Implementation: Redstone
 
+#Server needs to be apart of both groups to be considered a hub server.
+Redstone-Groups:
+  - "DEV"
+  - "Lobby"
+
+#TODO
+Donator-Hub: hub-restricted
+
 #This bit is not needed if you are using the Redstone Implementation.
 Hub-Servers:
-  - na-hub-01
-  - eu-hub-01
+  - hub-01
+  - hub-02
